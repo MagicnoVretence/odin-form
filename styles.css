@@ -10,12 +10,12 @@
 
 body {
     display: flex;
-    
+    justify-content: space-between;
     height: 100vh;
 }
 
 #leftSide {
-    width: 50vw;
+    width: calc(100% - 60vw);
     background-image: url(./halie-west-25xggax4bSA-unsplash.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@ body {
 }
 
 #logo {
-    height: 100%;
+    height: 85%;
 }
 
 #imgCredit {
@@ -47,4 +47,23 @@ body {
 
 #imgCredit a {
     color: hsl(0, 0%, 70%);
+}
+
+#rightSide {
+    width: 60vw;
+}
+
+#rightTop {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#text1, #text2 {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+#text1 {
+    margin-top: 15vh;
+    margin-bottom: 1.5em;
 }
