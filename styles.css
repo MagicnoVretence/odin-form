@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+*:focus {
+    border: none;
+    outline: none;
+}
+
 @font-face {
     font-family: norse;
     src: url(https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf);
@@ -102,25 +107,20 @@ form {
     font-weight: bold;
 }
 
-.inputs {
+input {
     font-size: 1em;
     width: 95%;
     border: 2px solid #E5E7EB;
     border-radius: 5px;
 }
 
-.inputs:focus {
-    font-size: 1em;
-    width: 95%;
+input:focus, input:focus-visible {
     border: 2px solid blue;
-    border-radius: 5px;
+    box-shadow: 1px 1px 4px hsl(0, 0%, 70%);
 }
 
 .error {
-    font-size: 1em;
-    width: 95%;
     border: 2px solid red;
-    border-radius: 5px;
 }
 
 #rightLow {
