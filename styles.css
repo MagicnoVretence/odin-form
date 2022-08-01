@@ -12,6 +12,7 @@ body {
     display: flex;
     justify-content: space-between;
     height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #leftSide {
@@ -51,11 +52,13 @@ body {
 
 #rightSide {
     width: 60vw;
+    background-color: hsl(0, 0%, 95%);
 }
 
 #rightTop {
     font-size: 1.5em;
     font-weight: bold;
+    background-color: hsl(0, 0%, 95%);
 }
 
 #text1, #text2 {
@@ -66,4 +69,82 @@ body {
 #text1 {
     margin-top: 15vh;
     margin-bottom: 1.5em;
+}
+
+#rightMid {
+    background-color: white;
+    box-shadow: 0px 5px 5px hsl(0, 0%, 60%);
+    position: relative;
+    z-index: 1;
+}
+
+#text3 {
+    padding-left: 1.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+form {
+    padding-left: 1.5em;
+    padding-right: 3em;
+    padding-bottom: 2.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5em;
+    justify-content: space-between;
+    grid-row-gap: 1.5em;
+}
+
+.label {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.inputs {
+    font-size: 1em;
+    width: 95%;
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+}
+
+.inputs:focus {
+    font-size: 1em;
+    width: 95%;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+.error {
+    font-size: 1em;
+    width: 95%;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+#rightLow {
+    background-color: hsl(0, 0%, 95%);
+    padding-top: 1.5em;
+}
+
+#submitButton {
+    padding: 1em;
+    margin-left: 2em;
+    background-color: #596D48;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    width: 35%;
+    font-weight: bold;
+}
+
+#text4 {
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+}
+
+#text4 a {
+    color: #596D48;
+    text-decoration: none;
 }
