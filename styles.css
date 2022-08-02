@@ -123,6 +123,10 @@ input:focus, input:focus-visible {
     border: 2px solid red;
 }
 
+.passOK {
+    border: 2px solid green;
+}
+
 #rightLow {
     background-color: hsl(0, 0%, 95%);
     padding-top: 1.5em;
