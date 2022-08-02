@@ -5,6 +5,7 @@ let form = document.getElementById('form');
 let submitButton = document.getElementById('submitButton');
 let firstName = document.getElementById('f1');
 let eMail = document.getElementById('f3');
+let text1 = document.getElementById('text1');
 
 let passOneValid = false;
 let passTwoValid = false;
@@ -87,6 +88,19 @@ function everythingOK() {
     };
 };
 
+function onResize() {
+    let height1 = text1.clientHeight;
+    let height2 = document.getElementsByTagName('html')[0].clientHeight;
+    let height3 = 0.25 * height2 + 28 - height1;
+    if (height3 >= 0) {
+        text1.style.marginTop = `${height3}px`;
+    } else {
+        text1.style.marginTop = 'none';
+    };
+};
+
 pass1.addEventListener('input', checkPass);
 pass2.addEventListener('input', checkPass);
 submitButton.addEventListener('click', everythingOK);
+window.addEventListener('resize', onResize);
+onResize();
