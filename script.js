@@ -1,6 +1,10 @@
 let pass1 = document.getElementById('pass1');
 let pass2 = document.getElementById('pass2');
 let passInfo = document.getElementById('passInfo');
+let form = document.getElementById('form');
+let submitButton = document.getElementById('submitButton');
+let firstName = document.getElementById('f1');
+let eMail = document.getElementById('f3');
 
 let passOneValid = false;
 let passTwoValid = false;
@@ -71,5 +75,18 @@ function checkPass(event) {
     checkBoth();
 };
 
+function everythingOK() {
+    if (!passwordsValid) {
+        alert('Password is not valid!');
+    } else if (firstName.value.length == 0) {
+        alert('First name is required!');
+    } else if ((eMail.value.length == 0) || (!eMail.checkValidity())) {
+        alert('Valid email is required!');
+    } else {
+        form.submit();
+    };
+};
+
 pass1.addEventListener('input', checkPass);
 pass2.addEventListener('input', checkPass);
+submitButton.addEventListener('click', everythingOK);
